@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -5,6 +6,9 @@ const Header = () => {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "retro"
   );
+
+
+  
 
   const handleToggle = (e) => {
     // console.log(e.target.checked);
@@ -27,13 +31,7 @@ const Header = () => {
           Recipify
         </Link>
       </div>
-      <div className="form-control">
-        <input
-          type="text"
-          placeholder="Search"
-          className="input input-bordered w-24 md:w-auto"
-        />
-      </div>
+      
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>
